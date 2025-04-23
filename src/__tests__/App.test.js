@@ -47,10 +47,10 @@ test("creates a new question when the form is submitted", async () => {
     target: { value: "1" },
   });
 
-  // submit form
+  // submitting form
   fireEvent.submit(screen.queryByText(/Add Question/));
 
-  // view questions
+  // to view questions
   fireEvent.click(screen.queryByText(/View Questions/));
 
   expect(await screen.findByText(/Test Prompt/g)).toBeInTheDocument();
